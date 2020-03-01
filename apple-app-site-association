@@ -1,0 +1,36 @@
+{
+  "applinks": {
+      "details": [
+           {
+             "appIDs": [ "teamID.bundleID", "teamID.bundleID2" ],
+             "components": [
+               {
+                  "#": "no_universal_links",
+                  "exclude": true,
+                  "comment": "「#no_universal_links」がついている場合、ユニバーサルリンクが発動しません！",
+                  "comment": "Matches any URL whose fragment equals no_universal_links and instructs the system not to open it as a universal link"
+               },
+               {
+                  "?": { "param": "?*" },
+                  "exclude": true,
+                  "comment": "「?param=」のパラメータがついていたら発動しません！",
+                  "comment": "Matches any which has a query item with name 'param' and instructs the system not to open it as a universal link"
+"
+               },
+               {
+                  "/": "/buy/*",
+                  "comment": "ドメイン直下が「/buy/」から始まる時、発動します！",
+                  "comment": "Matches any URL whose path starts with /buy/"
+
+               },
+               {
+                  "/": "/help/website/*",
+                  "exclude": true,
+                  "comment": "ドメイン直下が「/help/website/」から始まる時、発動しません！",
+                  "comment": "Matches any URL whose path starts with /help/website/ and instructs the system not to open it as a universal link"
+               }
+             ]
+           }
+       ]
+   }
+}
